@@ -1,0 +1,34 @@
+{
+  "name": "@ewarren/validation",
+  "version": "0.0.1",
+  "description": "Validate form fields",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist && cp ./src/data.json ./dist",
+    "build:data": "node -stack_size=2400 bin/build-data-file.js",
+    "test": "mocha",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elizabeth-Warren/validation.git"
+  },
+  "author": "Joe Kent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elizabeth-Warren/validation/issues"
+  },
+  "homepage": "https://github.com/Elizabeth-Warren/validation#readme",
+  "devDependencies": {
+    "@ewarren/unitedstatesofamerica": "^1.1.1",
+    "chai": "^4.2.0",
+    "email-providers": "^1.2.0",
+    "mocha": "^6.2.0",
+    "zipcodes": "^8.0.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
