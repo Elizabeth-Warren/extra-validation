@@ -1,7 +1,7 @@
 {
-  "name": "@ewarren/validation",
+  "name": "@ewarren/extra-validation",
   "version": "0.0.1",
-  "description": "Validate form fields",
+  "description": "Validate form fields with special rules",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist && cp ./src/data.json ./dist",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Elizabeth-Warren/validation.git"
+    "url": "git+https://github.com/Elizabeth-Warren/extra-validation.git"
   },
   "author": "Joe Kent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Elizabeth-Warren/validation/issues"
+    "url": "https://github.com/Elizabeth-Warren/extra-validation/issues"
   },
-  "homepage": "https://github.com/Elizabeth-Warren/validation#readme",
+  "homepage": "https://github.com/Elizabeth-Warren/extra-validation#readme",
   "devDependencies": {
     "@ewarren/unitedstatesofamerica": "^1.1.1",
     "chai": "^4.2.0",
