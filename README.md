@@ -29,7 +29,7 @@ isRealZipcode('10042') // false
 Check if the domain of an email input is likely meant to be something else. Common email domain providers imported from [https://www.npmjs.com/package/email-providers](https://www.npmjs.com/package/email-providers).
 
 ```js
-import { isRealZipcode } from '@ewarren/extra-validation';
+import { checkEmailDomain } from '@ewarren/extra-validation';
 
 checkEmailDomain('ewarren@gmail.com') // null
 checkEmailDomain('ewarren@gmai.com') // gmail.com
