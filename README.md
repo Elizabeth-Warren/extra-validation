@@ -2,6 +2,10 @@
 
 Validate form fields with special rules.
 
+```sh
+$ npm install @ewarren/extra-validation
+```
+
 **WARNING**: It is recommended to load this package asynchronously given the relatively large dataset (>150kb) that has to be loaded.
 
 ```js
