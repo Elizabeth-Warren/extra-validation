@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { isRealZipcode } = require('../dist');
+const { isRealZipcode, checkEmailDomain } = require('../dist');
 
 describe('valdiate zipcode', function() {
   it('should validate a NY zipcode', function() {
@@ -33,4 +33,21 @@ describe('valdiate zipcode', function() {
   it('should not validate a fake zipcode', function() {
     assert.isFalse(isRealZipcode('10042'));
   })
+});
+
+describe('validate email domain', function() {
+  it('should return recommended domain for misspelling', function() {
+    assert.equal(checkEmailDomain('test@gmai.com'), 'gmail.com');
+    assert.equal(checkEmailDomain('test@gail.com'), 'gmail.com');
+    assert.equal(checkEmailDomain('test@GMAIL.CO'), 'gmail.com');
+  });
+
+  it('should return no recommended domain for correct spelling', function() {
+    assert.isNull(checkEmailDomain('test@gmail.com'));
+  });
+
+  it('should return no recommended domain if email is malformatted', function() {
+    assert.isNull(checkEmailDomain('test'));
+    assert.isNull(checkEmailDomain('test@'));
+  });
 });

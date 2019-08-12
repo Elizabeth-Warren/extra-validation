@@ -5,13 +5,7 @@ build-lib:
 	make build-image
 	docker run --rm \
 		-v $(shell pwd):/usr/src/app \
-		unitedstatesofamerica npm run build
-
-build-data:
-	make build-image
-	docker run --rm \
-		-v $(shell pwd):/usr/src/app \
-		unitedstatesofamerica npm run build:data
+		unitedstatesofamerica npm run build:data && npm run build && ls -lah dist/
 
 tests:
 	make build-image

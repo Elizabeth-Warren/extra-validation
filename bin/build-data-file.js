@@ -40,10 +40,17 @@ const providers = require('email-providers/common.json');
 
   findRange(zipcodes, 0);
 
-  const numericalRanges = ranges.map(([a, b]) => [a.zipInt, b.zipInt]);
+  const zipRanges = ranges.map(([a, b]) => [a.zipInt, b.zipInt]);
   console.log('finished building zip ranges');
 
+  console.log('building email provider list');
+  const emailProviders = providers
+    .map(provider => provider.toLowerCase())
+    .filter(provider => ! ['gmai.com'].includes(provider)) // Filter out some...
+  console.log('finished building email provider list');
+
   await fs.writeFile(path.join(process.cwd(), 'src/data.json'), JSON.stringify({
-    zipRanges: numericalRanges,
+    zipRanges,
+    emailProviders,
   }));
 })();

@@ -2,11 +2,15 @@
 
 Validate form fields with special rules.
 
-**WARNING**: It is recommended to load this package asynchronously given the relatively large dataset that has to be loaded.
+**WARNING**: It is recommended to load this package asynchronously given the relatively large dataset (>150kb) that has to be loaded.
+
+```js
+import('@ewarren/extra-validation').then(module => ...);
+```
 
 ## Real US Zipcode Validation
 
-Covers all US states, territories and armed forces zip codes.
+Covers all US states, territories and armed forces zip codes. Zip codes were imported from [https://www.npmjs.com/package/zipcodes](https://www.npmjs.com/package/zipcodes).
 
 ```js
 import { isRealZipcode } from '@ewarren/extra-validation';
@@ -18,7 +22,16 @@ isRealZipcode('10042') // false
 
 ## Email Domain Recommendation
 
-TODO..
+Check if the domain of an email input is likely meant to be something else. Common email domain providers imported from [https://www.npmjs.com/package/email-providers](https://www.npmjs.com/package/email-providers).
+
+```js
+import { isRealZipcode } from '@ewarren/extra-validation';
+
+checkEmailDomain('ewarren@gmail.com') // null
+checkEmailDomain('ewarren@gmai.com') // gmail.com
+checkEmailDomain('EWARREN@GMAI.COM') // gmail.com
+checkEmailDomain('ewarren') // null
+```
 
 ## Local Development
 
