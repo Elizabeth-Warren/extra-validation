@@ -1,6 +1,6 @@
 {
   "name": "@ewarren/extra-validation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Validate form fields with special rules",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@ewarren/unitedstatesofamerica": "^1.1.1",
     "chai": "^4.2.0",
-    "email-providers": "^1.2.0",
     "mocha": "^6.2.0",
     "zipcodes": "^8.0.0"
   },
