@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs').promises;
 const { codes } = require('zipcodes');
 const { all } = require('@ewarren/unitedstatesofamerica');
-const providers = require('email-providers/common.json');
+const providers = require('../src/email-providers.json');
 
 (async function() {
   console.log('building data file');
