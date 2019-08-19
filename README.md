@@ -26,7 +26,7 @@ isRealZipcode('10042') // false
 
 ## Email Domain Recommendation
 
-Check if the domain of an email input is likely meant to be something else. Common email domain providers imported from [https://www.npmjs.com/package/email-providers](https://www.npmjs.com/package/email-providers).
+Check if the domain of an email input is likely meant to be something else. Common email domain providers pulled from the most common domains on the elizabeth warren email list.
 
 ```js
 import { checkEmailDomain } from '@ewarren/extra-validation';
